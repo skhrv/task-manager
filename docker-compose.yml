@@ -1,4 +1,4 @@
-version: '2'
+version: "2"
 services:
   web:
     build: .
@@ -12,6 +12,8 @@ services:
       - bundle_cache
     environment:
       BUNDLE_PATH: /bundle_cache
+      DATABASE_HOST: db
+      DATABASE_USERNAME: postgres
   db:
     image: postgres:10.3-alpine
   bundle_cache:
